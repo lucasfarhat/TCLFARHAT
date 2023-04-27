@@ -1,5 +1,5 @@
 #punto1 TP TCL FARHAT
-USE DATABASE proyectofinalprueba 
+USE proyectofinalprueba;
 
 START TRANSACTION;
 DELETE FROM productos WHERE id IN (2, 5);
