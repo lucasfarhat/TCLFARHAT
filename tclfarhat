@@ -1,0 +1,35 @@
+#punto1 TP TCL FARHAT
+USE DATABASE proyectofinalprueba 
+
+START TRANSACTION;
+DELETE FROM productos WHERE id IN (2, 5);
+INSERT INTO productos (id, nombre, precio) VALUES (2, 'Producto 2', 25.99);
+INSERT INTO productos (id, nombre, precio) VALUES (5, 'Producto 5', 10.50);
+# ROLLBACK;
+# COMMIT;
+
+#punto2 tp de TCL FARHAT
+
+#insertar ocho nuevos registros 
+
+INSERT INTO pedidos (id, fecha, producto_id, cantidad) 
+VALUES (NULL, '2023-04-26', 1, 2), 
+       (NULL, '2023-04-26', 2, 1), 
+       (NULL, '2023-04-26', 3, 3), 
+       (NULL, '2023-04-26', 4, 5),
+       (NULL, '2023-04-26', 5, 2), 
+       (NULL, '2023-04-26', 6, 1), 
+       (NULL, '2023-04-26', 7, 4), 
+       (NULL, '2023-04-26', 8, 2);
+       
+#Agregar savepoints:
+# SAVEPOINT savepoint4;
+# SAVEPOINT savepoint8;
+
+# Agregar la sentencia para eliminar el savepoint de los primeros 4 registros insertados:
+ 
+# ROLLBACK TO savepoint4;
+
+# Agregar la sentencia COMMIT:
+
+# COMMIT;
